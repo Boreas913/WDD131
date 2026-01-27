@@ -42,6 +42,16 @@ section {
     background-color: black;
     margin: 5px 0;
 }
+
+.menu-btn.open .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
+}
+.menu-btn.open .bar2 {opacity: 0;}
+
+.menu-btn.open .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+          
 footer {
     text-align: center;
 }

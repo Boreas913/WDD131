@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creditcard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="frontside">
+        <p>Total: $199</p>
+        <form id="checkoutForm" action="completed.html" method="get">
+        <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
+            <input
+            type="text"
+            id="creditCardNumber"
+            name="creditCardNumber"
+            pattern="[0-9]{16}"
+            placeholder="Enter 16 digits"
+            required
+            />
+        <label for="name">Card Holder:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+        <label for="expirationDate">Expiration</label>
+            <input 
+            type="text" 
+            id="month" 
+            name="expMonth" 
+            placeholder="MM" 
+            aria-labelledby="expirationDate">
+            <input 
+            type="text" 
+            id="year" 
+            name="expYear" 
+            placeholder="YY" 
+            aria-labelledby="expirationDate">
+    </div>
+    <div class="backside">
+        <label id="creditCardCVV" for="CVV">CVC/CVV:</label>
+            <input
+            type="text"
+            id="CVV"
+            name="CVV"
+            pattern="[0-9]{3}"
+            placeholder="xxx"
+            required
+            />
+    </div>
+    <button class="submit">Submit</button>
+</body>
+</html>

@@ -9,45 +9,64 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="frontside">
-        <p>Total: $199</p>
-        <form id="checkoutForm" action="completed.html" method="get">
-        <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
-            <input
-            type="text"
-            id="creditCardNumber"
-            name="creditCardNumber"
-            pattern="[0-9]{16}"
-            placeholder="Enter 16 digits"
-            required
-            />
-        <label for="name">Card Holder:</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required>
-        <label for="expirationDate">Expiration</label>
-            <input 
-            type="text" 
-            id="month" 
-            name="expMonth" 
-            placeholder="MM" 
-            aria-labelledby="expirationDate">
-            <input 
-            type="text" 
-            id="year" 
-            name="expYear" 
-            placeholder="YY" 
-            aria-labelledby="expirationDate">
+    <div class="form">
+        <div class="frontside">
+                <p class="total">Total: $199</p>
+                <p class="emoji">💳</p>
+            <div class="cardNumber">
+                <form id="checkoutForm" action="index.html" method="get">
+                <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
+                    <input
+                    type="text"
+                    id="creditCardNumber"
+                    name="creditCardNumber"
+                    pattern="[0-9]{16}"
+                    placeholder="Enter 16 digits"
+                    aria-labelledby="cardNumber"
+                    required
+                    />
+            </div>
+            <div class="cardHolder">
+                <label for="name">Card Holder:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="expiration">
+                <label for="expirationDate">Expiration</label>
+                    <div>
+                    <input 
+                    type="text" 
+                    id="month" 
+                    name="expMonth" 
+                    placeholder="MM"
+                    class="expirationInput" 
+                    aria-labelledby="expirationDate">
+                    <input 
+                    type="text" 
+                    id="year" 
+                    name="expYear" 
+                    placeholder="YY" 
+                    class="expirationInput"
+                    aria-labelledby="expirationDate">
+                    </div>
+            </div>
+        </div>
+        <div class="backside">
+            <div class="magneticStrip"></div>
+            <div class="cvv">
+                <label id="creditCardCVV" for="CVV">CVC/CVV:</label>
+                    <input
+                    type="text"
+                    id="CVV"
+                    name="CVV"
+                    pattern="[0-9]{3}"
+                    placeholder="xxx"
+                    class="CVVinput"
+                    required
+                    />
+            </div>
+        </div>
+        <button class="submit">Submit</button>
+    </form>
     </div>
-    <div class="backside">
-        <label id="creditCardCVV" for="CVV">CVC/CVV:</label>
-            <input
-            type="text"
-            id="CVV"
-            name="CVV"
-            pattern="[0-9]{3}"
-            placeholder="xxx"
-            required
-            />
-    </div>
-    <button class="submit">Submit</button>
 </body>
 </html>

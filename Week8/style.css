@@ -1,0 +1,11 @@
+.card{
+    background-color: rgb(186, 204, 231);
+    padding-bottom: 3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    margin:.5rem;
+}

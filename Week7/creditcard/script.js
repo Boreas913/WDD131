@@ -44,7 +44,6 @@ function submitHandler(event) {
     document.body.innerHTML = `
         <div style="text-align: center; padding: 20px;">
             <h2>Thank you for your purchase!</h2>
-            <p>Your order is being processed.</p>
         </div>
     `;
 }

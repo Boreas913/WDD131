@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+.card{
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(70%, 30%);
+}
+.name{
+    background-color: rgb(79, 105, 117);
+    width: 100%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-items: center;
+}
+.qualities{
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-items: center;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+button{
+    margin: .5rem;
+}

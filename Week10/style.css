@@ -1,0 +1,22 @@
+body{
+    background-color: antiquewhite;
+}
+.tags{
+    border: none;
+    border-width: 0;
+    border-style: none;
+    background-color:rgb(212, 153, 34);
+}
+.hike-card{
+    border: 3px solid black;
+    padding-left: 1rem;
+    margin: 1rem;
+}
+
+.highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  border-radius: 2px;
+  padding: 0 2px;
+}

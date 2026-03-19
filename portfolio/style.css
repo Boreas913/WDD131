@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Pirata+One|Instrument+Serif");
+
+:root {
+  --primary-color: #3a606e;
+  --secondary-color: white;
+  --accent1-color: #607B7D;
+  --accent2-color: #ECDEC4;
+
+  --heading-font: "Pirata One";
+  --paragraph-font: "Instrument Serif", "Lato", Helvetica, sans-serif;
+
+  --headline-color-on-white: var(--primary-color); 
+  --headline-color-on-color: white; 
+  --paragraph-color-on-white: var(--primary-color); 
+  --paragraph-color-on-color: white; 
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+
+header > h1,
+header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td {
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2 {
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav {
+  list-style-type: none;
+  display: flex;
+}
+nav a {
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+}
+nav a:link,
+nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas:
+    ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+  text-align: center;
+}
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+
+
+header {
+  height: 200vh;
+}
+.container {
+  clip-path: inset(0 0 0 0); /*magic*/
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  width: 100%;
+}
+
+.container_solid {
+  background: var(--blue);
+  top: 0;
+}
+
+.title_wrapper {
+  position: fixed;
+  display: block;  
+  margin: auto;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+  text-align: center;
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+}
+
+/*"Hi! I'm Aurora" that has image as color filled text and solid background*/
+.container_solid .title_wrapper h1 {
+  background: url(https://images.pexels.com/photos/6479557/pexels-photo-6479557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: 100vw auto;
+  background-position: center;
+  -webkit-text-fill-color: transparent;/*magic*/
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/*"Hi! I'm Aurora" with background*/
+.container_image {
+  background-image: url(https://images.pexels.com/photos/6479557/pexels-photo-6479557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+  color: var(--primary-color);
+}
+
+
+.banner {
+	margin-left: calc(50% - 50vw);
+	width: 100vw; 
+    height: 65vmin;
+	min-height: 30em;
+	background: linear-gradient(#000, transparent, #000), 
+		var(--img) 50%/ cover;/*magic*/
+	background-attachment: fixed;
+    --img: url(https://images.pexels.com/photos/6479557/pexels-photo-6479557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+	
+}

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Pirata+One|Instrument+Serif");
 
 :root {
-  --primary-color: #3a606e;
+  --primary-color: #E2C09F;
   --secondary-color: white;
-  --accent1-color: #607B7D;
-  --accent2-color: #ECDEC4;
+  --accent1-color: #A1967A;
+  --accent2-color: #D37E50;
 
   --heading-font: "Pirata One";
   --paragraph-font: "Instrument Serif", "Lato", Helvetica, sans-serif;
@@ -178,7 +178,6 @@ header {
 }
 
 .container_solid {
-  background: var(--blue);
   top: 0;
 }
 
@@ -198,8 +197,9 @@ header {
   font-size: 6rem;
   text-transform: uppercase;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: var(--heading-font);
   font-weight: 900;
+ 
 }
 
 /*"Hi! I'm Aurora" that has image as color filled text and solid background*/
@@ -222,7 +222,7 @@ header {
 }
 
 .container_image .title_wrapper h1 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 
@@ -230,7 +230,7 @@ header {
 	margin-left: calc(50% - 50vw);
 	width: 100vw; 
     height: 65vmin;
-	min-height: 30em;
+	min-height: 1vh;
 	background: linear-gradient(#000, transparent, #000), 
 		var(--img) 50%/ cover;/*magic*/
 	background-attachment: fixed;

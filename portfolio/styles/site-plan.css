@@ -5,10 +5,10 @@ Fonts are separated by a | */
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #3a606e;
-  --secondary-color: #607B7D;
-  --accent1-color: #985F6F;
-  --accent2-color: #ECDEC4;
+  --primary-color: #E2C09F;
+  --secondary-color: white;
+  --accent1-color: #A1967A;
+  --accent2-color: #D37E50;
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Pirata One";

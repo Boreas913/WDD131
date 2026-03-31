@@ -16,7 +16,7 @@
   --paragraph-background-color: var(--primary-color);
   --nav-link-color: var(--primary-color);
   --nav-background-color: var(--secondary-color);
-  --nav-hover-link-color: white;
+  --nav-hover-link-color: var(--accent2-color);
   --nav-hover-background-color: var(--primary-color);
 }
 
@@ -194,11 +194,12 @@ header {
 
 .title_wrapper h1 {
   text-align: center;
-  font-size: 6rem;
+  font-size: 10rem;
   text-transform: uppercase;
   text-align: center;
   font-family: var(--heading-font);
-  font-weight: 900;
+  font-weight: 1000;
+  letter-spacing: 1rem;
  
 }
 
@@ -229,10 +230,10 @@ header {
 .banner {
 	margin-left: calc(50% - 50vw);
 	width: 100vw; 
-    height: 65vmin;
+    height: 30vmin;
 	min-height: 1vh;
 	background: linear-gradient(#000, transparent, #000), 
-		var(--img) 50%/ cover;/*magic*/
+		var(--img) 50%/ cover;
 	background-attachment: fixed;
     --img: url(https://images.pexels.com/photos/6479557/pexels-photo-6479557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 	

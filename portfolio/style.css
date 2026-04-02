@@ -286,3 +286,44 @@ footer a {
   padding-right: 70%;
   margin-top: -20rem;
 }
+
+.searchImg{
+  width:1rem;
+}
+
+.searchImgBtn{
+    border: none; 
+    outline: none;
+    background: var(--primary-color);  
+    color: white;        
+    padding: .2rem .5rem;    
+    cursor: pointer;       
+}
+
+.search {
+    margin: 2rem 0;
+    display: flex;
+}
+
+.searchBar { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border: 1px solid var(--primary-color); 
+    padding: 1rem; 
+    width: 50%; 
+    height: 2rem;
+    margin: 10rem 1rem 0 20%;
+} 
+
+.searchBar input { 
+    border: none; 
+    outline: none; 
+    flex: 1; 
+}
+
+.boyOnPillar{
+  height: 15rem;
+  width: auto;
+  margin: 0;
+}

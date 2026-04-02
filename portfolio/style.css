@@ -52,8 +52,10 @@ header > h1,
 header > h2 {
   color: var(--headline-color-on-color);
 }
-
-p {
+nav, footer{
+  font-family: var(--heading-font);
+}
+p, li {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   padding: 1em;
@@ -99,12 +101,20 @@ nav {
 nav {
   list-style-type: none;
   display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
 }
 nav a {
   padding: 1em;
   min-width: 120px;
   text-decoration: none;
   padding: 10px;
+  font-size: 2rem;
 }
 nav a:link,
 nav a:visited {
@@ -163,13 +173,17 @@ nav a:hover {
   border-right: 1px solid;
 }
 
-
-
 header {
-  height: 200vh;
+  height: 195vh;
 }
+
+.pictureOfMe{
+  height: 15rem;
+  width: auto;
+}
+
 .container {
-  clip-path: inset(0 0 0 0); /*magic*/
+  clip-path: inset(0 0 0 0);
   overflow: hidden;
   position: absolute;
   height: 100vh;
@@ -226,15 +240,49 @@ header {
   color: var(--secondary-color);
 }
 
-
 .banner {
 	margin-left: calc(50% - 50vw);
 	width: 100vw; 
-    height: 30vmin;
+  height: 30vmin;
 	min-height: 1vh;
 	background: linear-gradient(#000, transparent, #000), 
 		var(--img) 50%/ cover;
 	background-attachment: fixed;
     --img: url(https://images.pexels.com/photos/6479557/pexels-photo-6479557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 	
+}
+
+.skillsList{
+  column-count: 2;
+  column-gap: 5rem;
+  padding-left: 50%;
+}
+
+footer{
+  display:flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+footer a {
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.girlLookingUp{
+  height: 15rem;
+  width: auto;
+  padding-left: 60%;
+  margin-bottom: -3rem;
+}
+
+.angelOnCloud{
+  height: 20rem;
+  width: auto;
+  padding-right: 70%;
+  margin-top: -20rem;
 }

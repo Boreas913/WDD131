@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
 	{
 		tags: ['Figma', 'Design', 'UX'],
 		description: 'Spearheaded a comprehensive redesign of the Snow College’s digital ecosystem in Figma, focusing on intuitive information architecture for prospective students.',

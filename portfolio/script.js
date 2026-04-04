@@ -1,4 +1,5 @@
 import { searchProjects } from './search.js';
+import { projects } from './projects.js';
 
 const ProjectContainer = document.querySelector('#projectCards');
 const input = document.querySelector('#search');
@@ -23,28 +24,25 @@ input.addEventListener('keypress', event => {
     }
 });
 
+function tagTemplate(tags) {
+    return tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
+}
 
 function projectsTemplate(project) {
     return `
-    <article class="project-card">
-        <img src="${project.image}" alt="Image of ${project.name}" class="projectPhoto">
+    <article class="projectCard">
+        <div>
+            <h2>${project.name}</h2>
+            <img src="${project.image}" alt="Image of ${project.name}" class="projectPhoto">
+        </div>
         <div class="projectDescriptions">
-            <p class="tags">${project.tags[0]}</p>
-            <h4>${project.name}</h4>
             <p class="description">${project.description}</p>
             <div class="projectTagList">
                 ${tagTemplate(project.tags)}
             </div>
         </div>
-        <a href="${project.projectURL}" class="button">View Project</a>
+        <a href="${project.projectURL}" class="button">View</a>
     </article>`;
 }
 
-
-
-// function init() {
-//     let randomNum = Math.floor(Math.random() * recipes.length);
-//     renderRecipes(recipes[randomNum]);
-// }
-
-// init();
+renderProjects(projects);
